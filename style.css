@@ -1,0 +1,111 @@
+:root {
+    --cor-fundo: #E8EBE4; /* Cinza claro e suave */
+    --cor-principal: #FFFFFF; /* Branco puro */
+    --cor-secundaria: #A2C1C9; /* Azul esverdeado suave */
+    --cor-destaque: #6B4226; /* Marrom terroso */
+    --cor-texto: #333333; /* Cinza escuro para melhor leitura */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.caixa-principal:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.caixa-perguntas {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 10px;
+    padding: 18px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.caixa-resultado {
+    font-size: 1.2rem;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 15px;
+    background-color: #F8F8F8; /* Um cinza ainda mais claro */
+    border: 1px solid var(--cor-secundaria);
+    line-height: 1.8;
+}
+
+.texto-resultado {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .caixa-principal {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .caixa-perguntas {
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+}
